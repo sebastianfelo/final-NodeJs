@@ -16,6 +16,10 @@ Este proyecto NodeJs con Express, es una **API CRUD** orientada a locales comerc
 ## Instalación - Clonar el repositorio
 
 ```bash
+https://github.com/sebastianfelo/final-NodeJs.git
+
+o tambien:
+
 degit sebastianfelo/final-NodeJs carpeta-destino
 ```
 
