@@ -27,10 +27,12 @@ const getProdById = async (req, res) => {
 
 const createProduct = async (req, res) => {
     try {
-        const {nombre, precio, disponible} = req.body;
+        const {nombre, categoria, precio, descripcion, disponible} = req.body;
         const newProduct = {
-            nombre, 
+            nombre,
+            categoria,
             precio:+precio, //el + convierte a precio (string)en número
+            descripcion,
             disponible:disponible || false 
         }; 
         await productService.createProduct(newProduct);
@@ -40,6 +42,27 @@ const createProduct = async (req, res) => {
         res.status(500).json({ message: "Error al traer todos los productos", error: error.message });
     }
 };
+
+const updateProd = async (req, res) => {
+    console.log("Entró a updateProd", req.params, req.body);
+    try {
+        const { id } = req.params;
+        console.log("ID del producto a actualizar:", id);
+        const { nombre, categoria, precio, descripcion, disponible } = req.body;
+        const updatedProduct = {
+            nombre,
+            categoria,
+            precio:+precio,
+            descripcion,
+            disponible:disponible || false
+        };
+        await productService.updateProd(id, updatedProduct);
+        res.status(200).json({message:"Producto actualizado exitosamente", payload: updatedProduct});
+    } catch (error) {
+        console.error("Error al actualizar el producto: ", error);
+        res.status(500).json({ message: "Error al actualizar el producto", error: error.message });
+    }
+}
 
 const deleteProd = async (req, res) => {
     try {
@@ -57,4 +80,4 @@ const deleteProd = async (req, res) => {
 };
 
 
-export default { getProducts, getProdById, createProduct, deleteProd };
+export default { getProducts, getProdById, createProduct, updateProd, deleteProd };

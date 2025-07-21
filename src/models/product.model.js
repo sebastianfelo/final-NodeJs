@@ -48,6 +48,17 @@ export const seveProduct = async (product) => {
     }
 }
 
+//Actualizar un producto
+export const updateProduct = async (id, product) => {
+    try {
+        const productDoc = doc(db, "productos", id);
+        await updateDoc(productDoc, product);
+    } catch (error) {
+        console.error("Error al actualizar el producto: ", error);
+        throw new Error("Error al actualizar el producto", error.message);
+    }
+}
+
 //Eliminar un producto
 export const deleteProduct = async (id) => {
     try {

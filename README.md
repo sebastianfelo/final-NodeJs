@@ -45,19 +45,19 @@ npm start
 
 ### EndPoints
 
-GET - Obtener todos los productos:
+**GET - Obtener todos los productos:**
 
 ```bash
 localhost:3000/api/products
 ```
 
-GET - Obtener un producto por Id:
+**GET - Obtener un producto por Id:**
 
 ```bash
 localhost:3000/api/products/id
 ```
 
-POST - Cargar un nuevo producto: (El Id se genera automaticamente)
+**POST - Cargar un nuevo producto: (El Id se genera automaticamente)**
 
 ```bash
 localhost:3000/api/products/
@@ -71,7 +71,21 @@ localhost:3000/api/products/
 }
 ```
 
-DELETE - Eliminar un producto por Id:
+**PUT - Actualizar un producto mediante su Id:**
+
+```bash
+localhost:3000/api/products/id
+
+{
+    "nombre":"Nombre del Producto",
+    "categoria":"Categoria",
+    "precio":"Precio",
+    "descripcion":"Descripción del Producto",
+    "disponible": true / false
+}
+```
+
+**DELETE - Eliminar un producto por Id:**
 
 ```bash
 localhost:3000/api/products/id
@@ -80,21 +94,6 @@ localhost:3000/api/products/id
 
 
 
-
-Una vez instalado deberás correr el siguiente comando:
-
-```bash
-ncu -u
-```
-
-Esto modificará tu archivo package.json para que todas las dependencias estén listadas en sus últimas versiones.
-
-Una vez completado este proceso, basta con ejecutar el siguiente comando para actualizar todas tus dependencias:
-
-```bash
-npm install
-```
-
 ## Estructura del proyecto
 ``` plaintext
 carpeta-destino/
@@ -102,16 +101,16 @@ carpeta-destino/
 │   └── db.js               # Configuración de la base de datos
 │
 ├── controllers/           # Controladores: lógica que responde a las rutas
-│   └── user.controller.js
+│   └── product.controller.js
 │
 ├── services/              # Servicios: lógica de negocio reutilizable
-│   └── user.service.js
+│   └── product.service.js
 │
 ├── routes/                # Definición de rutas y middlewares asociados
-│   └── user.routes.js
+│   └── product.routes.js
 │
 ├── models/                # Modelos de datos (si usás MongoDB, Sequelize, etc.)
-│   └── user.model.js
+│   └── product.model.js
 │
 ├── middlewares/           # Middlewares personalizados
 │   └── auth.middleware.js
@@ -125,4 +124,4 @@ carpeta-destino/
 
 ## Licencia
 
-Este proyecto está licenciado bajo la licencia **MIT**. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
+En construcción....
