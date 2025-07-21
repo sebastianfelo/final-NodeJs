@@ -1,6 +1,9 @@
-# Plantilla de servidor con capas Express
+# Final TT Node Js 
 
-Este proyecto es una plantilla básica para configurar un servidor con **Express** y **Nodemon**, ideal para iniciar rápidamente nuevos desarrollos en Node.js.
+## Sistema CRUD API - Rest
+
+Este proyecto NodeJs con Express, es una **API CRUD** orientada a locales comerciales, y poder brindar el catálogo de productos de un local comercial.
+
 
 ## Características
 
@@ -10,35 +13,15 @@ Este proyecto es una plantilla básica para configurar un servidor con **Express
 
 ---
 
-## Instalación
-
-### 1. Clonar el repositorio con `degit`
-
-`degit` es una herramienta para clonar plantillas de manera limpia (sin el historial de Git).
-
-#### Instalar `degit` (si no lo tienes instalado)
+## Instalación - Clonar el repositorio
 
 ```bash
-npm install -g degit
-```
-
-#### Clonar el repositorio
-
-```bash
-degit DanielRiverol/template-express-layers carpeta-destino
+degit sebastianfelo/final-NodeJs carpeta-destino
 ```
 
 Reemplaza `usuario/repo-nombre` por el nombre del repositorio y `carpeta-destino` por el nombre de la carpeta donde deseas clonar el proyecto.
 
-### 2. Instalar dependencias
-
-Una vez clonado el repositorio, entra en la carpeta del proyecto:
-
-```bash
-cd carpeta-destino
-```
-
-Luego, instala las dependencias:
+### Instalar dependencias
 
 ```bash
 npm install
@@ -53,16 +36,46 @@ npm install
 Este comando inicia el servidor en modo desarrollo con Nodemon:
 
 ```bash
-npm run dev
+npm start
 ```
 
-### Actualizar dependencias (Opcional)
+### EndPoints
 
-Para poder todas estas dependencias a su última versión, deberás instalar un paquete llamado `npm-check-updates` de forma global:
+GET - Obtener todos los productos:
 
 ```bash
-npm install -g npm-check-updates
+localhost:3000/api/products
 ```
+
+GET - Obtener un producto por Id:
+
+```bash
+localhost:3000/api/products/id
+```
+
+POST - Cargar un nuevo producto: (El Id se genera automaticamente)
+
+```bash
+localhost:3000/api/products/
+
+{
+    "nombre":"Nombre del Producto",
+    "categoria":"Categoria",
+    "precio":"Precio",
+    "descripcion":"Descripción del Producto",
+    "disponible": true / false
+}
+```
+
+DELETE - Eliminar un producto por Id:
+
+```bash
+localhost:3000/api/products/id
+```
+
+
+
+
 
 Una vez instalado deberás correr el siguiente comando:
 
