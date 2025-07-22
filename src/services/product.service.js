@@ -9,6 +9,8 @@ const getProdById = async (id) => {
   return await getProductById(id);
 };
 
+
+
 const createProduct = async (product) => {
   return await seveProduct(product);
 };

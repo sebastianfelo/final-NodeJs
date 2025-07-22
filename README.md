@@ -85,7 +85,7 @@ localhost:3000/api/products/id
 }
 ```
 
-**DELETE - Eliminar un producto por Id:**
+**DELETE - Eliminar un producto mediante su Id:**
 
 ```bash
 localhost:3000/api/products/id
@@ -97,6 +97,9 @@ localhost:3000/api/products/id
 ## Estructura del proyecto
 ``` plaintext
 carpeta-destino/
+├── public/                 # Acceso publico
+│   └── index.html          # Index de Home
+|
 ├── config/                 # Configuraciones generales (DB, variables de entorno, etc.)
 │   └── db.js               # Configuración de la base de datos
 │

@@ -15,10 +15,6 @@ router.post('/', productCollection.createProduct);
 
 //PUT - Actualizar un producto por Id
 router.put('/:id', productCollection.updateProd);
-/*router.put('/:id', (req, res) => {
-    console.log("Entró a updateProd", req.params, req.body);
-    res.status(200).json({message:"Producto actualizado exitosamente", payload: req.body});
-}); */
 
 //DELETE
 router.delete('/:id', productCollection.deleteProd);

@@ -1,5 +1,5 @@
 {
-  "name": "template-server-layers",
+  "name": "Final NodeJs",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Daniel Riverol",
+  "author": "Sebastian Alvarez",
   "license": "MIT",
   "type": "module",
-  "description": "Plantilla de servidor con capas ",
+  "description": "Final NodeJs - Talento Tech",
   "dependencies": {
     "dotenv": "^17.2.0",
     "express": "^5.1.0",

@@ -36,6 +36,8 @@ export const getProductById = async (id) => {
     }
 };
 
+
+
 //Guardar un producto nuevo
 export const seveProduct = async (product) => {
     try {

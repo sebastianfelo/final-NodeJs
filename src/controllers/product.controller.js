@@ -25,6 +25,8 @@ const getProdById = async (req, res) => {
     }
 };
 
+
+
 const createProduct = async (req, res) => {
     try {
         const {nombre, categoria, precio, descripcion, disponible} = req.body;
