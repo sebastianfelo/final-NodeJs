@@ -57,6 +57,12 @@ localhost:3000/api/products
 localhost:3000/api/products/id
 ```
 
+**GET - Obtener categorias para armar el NavBar:**
+
+```bash
+localhost:3000/api/categorias
+```
+
 **POST - Cargar un nuevo producto: (El Id se genera automaticamente)**
 
 ```bash
@@ -105,22 +111,25 @@ carpeta-destino/
 │
 ├── controllers/           # Controladores: lógica que responde a las rutas
 │   └── product.controller.js
+│   └── categorias.controller.js
 │
 ├── services/              # Servicios: lógica de negocio reutilizable
 │   └── product.service.js
+│   └── categorias.service.js
 │
 ├── routes/                # Definición de rutas y middlewares asociados
 │   └── product.routes.js
+│   └── categorias.routes.js
 │
-├── models/                # Modelos de datos (si usás MongoDB, Sequelize, etc.)
+├── models/                # Modelos de datos (FireStore)
 │   └── product.model.js
+│   └── categorias.model.js
 │
-├── middlewares/           # Middlewares personalizados
-│   └── auth.middleware.js
 │
 ├── index.js               # Punto de entrada del servidor
 ├── package.json           # Dependencias y scripts
 ├── README.md              # Documentación del proyecto
+├── .env                   # Credenciales de FireStore (Ejemplo: .env.example)
 
 ```
 ---
